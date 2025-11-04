@@ -8,15 +8,16 @@ body {
   color: rgba(255, 215, 0, 0.7);
   font-family: 'Poppins', sans-serif;
 
+  margin: 0;
+  padding: 0;
+  background-image: url("./imagenes/fondoLanding_cut.png"); /* ← ruta a tu imagen */
+  background-size: cover;      /* cubre toda la pantalla */
+  background-position: center; /* centrada */
+  background-repeat: no-repeat;/* no se repite */
+  background-attachment: fixed;
 }
 
-h3{
-   color:rgba(255, 215, 0, 0.7);
-   font-weight: bold;
-   font-style: normal;
-   text-align: center;
-   margin:20px;
-}
+
 
 .ruleta-container {
   position: relative;
@@ -154,5 +155,39 @@ button:hover {
       0 0 20px #ff9900,
       0 0 40px #ff6600;
   }
+}
+
+.perros-deco {
+ position: fixed;   /* se sostiene en la pantalla */
+  bottom: 5;         /* al fondo */
+  left: 0;
+  width: 100%;       /* ancho completo */
+  height: 0;
+  z-index: 0;        /* detrás de la ruleta */
+  pointer-events: none;
+}
+
+.perro {
+  position: absolute;
+  bottom: 0px;
+  top: 50%;
+  width: 350px;   /* podés ajustar */
+  transform: translateY(-50%);
+  opacity: 1;
+  z-index: 0;     /* detrás de la ruleta */
+  pointer-events: none;/* no se pueden clicar */
+  opacity: 0.95;
+}
+
+/* Izquierda mirando hacia la derecha */
+.perro-left {
+  left: 0;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+/* Derecha normal mirando hacia la izquierda */
+.perro-right {
+  right: 0;
+  transform: translateY(-50%);
 }
 
