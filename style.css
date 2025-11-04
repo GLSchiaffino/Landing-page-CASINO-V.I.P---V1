@@ -18,7 +18,6 @@ body {
 }
 
 
-
 .ruleta-container {
   position: relative;
   width: 300px;
@@ -182,7 +181,7 @@ button:hover {
 /* Izquierda mirando hacia la derecha */
 .perro-left {
   left: 0;
-  transform: translateY(-50%) scaleX(-1);
+  transform: translateY(-50%) ;
 }
 
 /* Derecha normal mirando hacia la izquierda */
