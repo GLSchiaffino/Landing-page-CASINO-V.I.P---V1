@@ -1,0 +1,158 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: radial-gradient(circle, rgb(58, 0, 68), #000);
+  color: rgba(255, 215, 0, 0.7);
+  font-family: 'Poppins', sans-serif;
+
+}
+
+h3{
+   color:rgba(255, 215, 0, 0.7);
+   font-weight: bold;
+   font-style: normal;
+   text-align: center;
+   margin:20px;
+}
+
+.ruleta-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.ruleta {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid gold;
+  background: conic-gradient(
+    #ff0000 0deg 60deg,
+    #00ff00 60deg 120deg,
+    #0000ff 120deg 180deg,
+    #ffff00 180deg 240deg,
+    #ff00ff 240deg 300deg,
+    #00ffff 300deg 360deg
+  );
+  transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.flecha {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid gold;
+}
+
+button {
+  margin-top: 40px;
+  padding: 12px 30px;
+  font-size: 1.5rem;
+  color: #000;
+  background:linear-gradient(90deg, #ffd700, #ffb300);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: red;
+  color:rgba(255, 215, 0, 0.7);
+}
+
+.btn.bono {
+    font-size: 1.5rem;
+    padding: 18px;
+    max-width: 350px;
+    background: linear-gradient(90deg, #ffd700, #ffb300);
+    color: #000;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+}
+
+.btn.bono:hover{
+    background: red;
+    color:rgba(255, 215, 0, 0.7);
+
+}
+
+
+.titulos {
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  color: #6100bb; /* dorado principal */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+
+  /* Efecto de brillo inicial */
+  text-shadow:
+    0 0 5px #fff6c2,
+    0 0 10px #ffec80,
+    0 0 20px #ffcc00,
+    0 0 40px #ff9900,
+    0 0 80px #ff6600;
+
+  opacity: 0;
+  transform: scale(0.8);
+  animation:
+    encendido 2s ease-out forwards,
+    parpadeo 2s infinite alternate 2s; /* el parpadeo empieza después del encendido */
+}
+
+/* ✨ Animación: aparece con zoom y se enciende el brillo */
+@keyframes encendido {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    text-shadow: none;
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+    text-shadow:
+      0 0 10px #fff6c2,
+      0 0 20px #ffec80,
+      0 0 40px #ffcc00;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    text-shadow:
+      0 0 5px #fff6c2,
+      0 0 10px #ffec80,
+      0 0 20px #ffcc00,
+      0 0 40px #ff9900,
+      0 0 80px #ff6600;
+  }
+}
+
+/* 💥 Animación continua: parpadeo leve */
+@keyframes parpadeo {
+  from {
+    text-shadow:
+      0 0 5px #fff6c2,
+      0 0 10px #ffec80,
+      0 0 20px #ffcc00,
+      0 0 40px #ff9900,
+      0 0 80px #ff6600;
+  }
+  to {
+    text-shadow:
+      0 0 2px #fff3a1,
+      0 0 4px #ffd84d,
+      0 0 10px #ffcc00,
+      0 0 20px #ff9900,
+      0 0 40px #ff6600;
+  }
+}
+
