@@ -77,7 +77,7 @@ body {
   position: absolute;
   left: 46%;
   top: 48%;
-  transform-origin: center;
+
   font-size: 18px;
   font-weight: 700;
   pointer-events: none;

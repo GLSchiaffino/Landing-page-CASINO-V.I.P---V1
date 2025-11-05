@@ -64,7 +64,15 @@ window.addEventListener('resize', () => {
 });
 
 // ==== GIRO ====
+
+let yaTiro = false;
 boton.addEventListener("click", () => {
+   if (yaTiro) {
+    alert("⚠️ Lo siento, es sólo un intento por persona 😔. ⚠️");
+    
+  }
+
+ 
   if (girando) return;
   girando = true;
 
@@ -84,9 +92,9 @@ boton.addEventListener("click", () => {
   const rotacionTotal = 360 * vueltas + anguloFinal;
 
   ruleta.style.transform = `rotate(${rotacionTotal}deg)`;
-
+   yaTiro = true;
   setTimeout(() => {
     girando = false;
-    alert("🎉 ¡FELICIDADES, GANASTE 30! 🎉\nPresiona el botón de contacto para reclamar tu premio");
+    alert("🎉 ¡FELICIDADES, GANASTE 30% de BONUS en tu primera carga! 🎉\nPresiona el botón de contacto para reclamar tu premio 🎰");
   }, 4200);
 });
