@@ -24,7 +24,13 @@ body {
 
 
 /* ============  RULETA  ============ */
-
+#ruleta {
+  position: relative;
+  width: 300px;     /* o tu tamaño */
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
 .ruleta-container {
   position: relative;
   width: 300px;
@@ -67,7 +73,17 @@ body {
   z-index:999;
 }
 
-
+.sector-label {
+  position: absolute;
+  left: 46%;
+  top: 48%;
+  transform-origin: center;
+  font-size: 18px;
+  font-weight: 700;
+  pointer-events: none;
+  color: white;
+  text-shadow: 0 0 4px black;
+}
 /* ============  BOTONES  ============ */
 
 button {
