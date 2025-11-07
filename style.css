@@ -1,5 +1,8 @@
 /* ============  BASE  ============ */
-
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -247,13 +250,39 @@ button:hover {
 }
 
 /* ===== CELULAR ===== */
+
+/* ===== CELULAR ===== */
 @media (max-width: 600px) {
-  .ruleta-container {
-    width: 160px;
-    height: 160px;
+
+  .ruleta {
+    width: 240px;
+    height: 240px;
   }
 
+  .ruleta-container {
+    width: 260px;
+    height: 260px;
+    margin-top: 10px;
+  }
+
+  .sector-label {
+    font-size: 14px;
+  }
+
+/* ===== CELULAR ===== */
+}@media (max-width: 600px) {
   .perro {
-    width: 160px;
+    width: 110px;
+    top: auto;
+    bottom: 20px;
+  }
+
+  .perro.izq {
+    left: -10px;
+  }
+
+  .perro.der {
+    right: -10px;
   }
 }
+/* ===== CELULAR ===== */
