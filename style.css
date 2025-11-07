@@ -7,7 +7,7 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-
+  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +22,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  
 }
 
 img {
@@ -62,15 +63,15 @@ img {
 /* Flecha fija arriba */
 .flecha {
   position: absolute;
-  top: -22px;
+  top: 2px;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 25px solid gold;
-  z-index: 999;
+  border-top: 55px solid gold;
+  z-index: 6;
 }
 
 /* Texto dentro de la ruleta */
@@ -78,7 +79,7 @@ img {
   position: absolute;
   left: 50%;
   top: 50%;
-
+  z-index: 6;
   font-size: 18px;
   font-weight: 700;
   pointer-events: none;
@@ -91,6 +92,7 @@ img {
 /* ============ BOTONES ============ */
 button {
   font-family: 'Bebas Neue';
+  z-index: 6;
   margin-top: 20px;
   padding: 12px 30px;
   font-size: 1.5rem;
@@ -112,6 +114,7 @@ button:hover {
   font-size: 1.2rem;
   padding: 18px;
   max-width: 350px;
+  z-index: 6;
 }
 
 /* ============ TITULO ============ */
@@ -120,6 +123,7 @@ button:hover {
   text-align: center;
   color: #6100bb;
   margin-bottom: 20px;
+  z-index: 6;
 }
 
 /* ============ PERROS ============ */
@@ -128,7 +132,7 @@ button:hover {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;        /* DETRÁS DE TODO */
+  z-index: 1;        /* DETRÁS DE TODO */
   pointer-events: none;
 }
 
@@ -183,6 +187,8 @@ button:hover {
 
   .sector-label {
     font-size: 13px;
+    color: white;              /* ✅ siempre visible */
+  text-shadow: 0 0 4px black;
   }
 
   .perro {
@@ -194,3 +200,5 @@ button:hover {
   button,
   .btn.bono {
     font-size
+  }
+}
