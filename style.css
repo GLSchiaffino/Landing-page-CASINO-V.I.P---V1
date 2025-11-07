@@ -1,6 +1,6 @@
 /* ============ BASE ============ */
 html, body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   max-width: 100%;
 }
 
@@ -22,6 +22,12 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   
 }
 
@@ -163,6 +169,11 @@ button:hover {
 
 
 /* ============ PERROS ============ */
+
+* {
+  box-sizing: border-box;
+}
+
 .perros-deco {
   position: absolute;
   top: 0;
@@ -170,7 +181,10 @@ button:hover {
   height: 100%;
   z-index: 1;        /* DETRÁS DE TODO */
   pointer-events: none;
+  overflow: hidden;
+  inset:0;
 }
+
 
 .perro {
   position: absolute;
@@ -271,8 +285,4 @@ button:hover {
     top: auto;
   }
 
-  button,
-  .btn.bono {
-    font-size
-  }
 }
