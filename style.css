@@ -294,7 +294,7 @@ button:hover {
     top: auto;
   }
    .perro-left {
-    top: calc(55%+2px );
+    top: calc(55%+1px );
   }
   .btn.bono {
     margin-top: 65px;
