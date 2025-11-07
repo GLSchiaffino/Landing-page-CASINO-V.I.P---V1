@@ -271,9 +271,11 @@ button:hover {
     background-position: center top;
   }
     .ruleta {
-    border: 6px solid #d4af37;   /* oro menos chillón */
+    border: 6px solid #d4af37;  
   }
-
+  .flecha {
+    border: 6px solid #d4af37;
+  }
   .ruleta-container {
     width: 210px;
     height: 210px;
@@ -292,7 +294,7 @@ button:hover {
   }
 
   .btn.bono {
-    margin-top: 50px;
+    margin-top: 65px;
   }
 
 }
