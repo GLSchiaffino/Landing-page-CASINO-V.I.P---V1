@@ -274,7 +274,8 @@ button:hover {
     border: 6px solid #d4af37;  
   }
   .flecha {
-    border: 6px solid #d4af37;
+   color: 6px solid#d4af37;
+   z-index: 5;
   }
   .ruleta-container {
     width: 210px;
@@ -292,7 +293,9 @@ button:hover {
     bottom: 20px;
     top: auto;
   }
-
+   .perro-left {
+    top: calc(55% - 7px);
+  }
   .btn.bono {
     margin-top: 65px;
   }
