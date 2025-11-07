@@ -20,11 +20,15 @@ body {
   background: radial-gradient(circle, rgb(58, 0, 68), #000);
   background-image: url("./imagenes/fondoLanding_cut.png");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
+img {
+  user-select: none;
+  pointer-events: none;
+}
 
 /* ============  RULETA  ============ */
 #ruleta {
@@ -249,28 +253,44 @@ button:hover {
   }
 }
 
-/* ===== CELULAR ===== */
+/* =========== CELULAR =========== */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Fixed causa problemas en móvil */
+        background-position: center bottom; /* Ajusta qué parte se ve */
+    }
+}
 
-/* ===== CELULAR ===== */
-@media (max-width: 600px) {
 
+
+/* ===== RULETA CELULAR ===== */
+
+@media{
   .ruleta {
     width: 240px;
     height: 240px;
   }
+}
 
+@media(max-width: 768px){
   .ruleta-container {
-    width: 260px;
-    height: 260px;
-    margin-top: 10px;
+    width: 250px;
+    height: 250px;
   }
-
   .sector-label {
     font-size: 14px;
   }
+}
+@media (max-width: 480px) {
+    .ruleta-container {
+     width: 200px; /* Aún más pequeño en pantallas muy chicas */
+     height: 200px;
+    }
+  }
 
-/* ===== CELULAR ===== */
-}@media (max-width: 600px) {
+/* =====PERRO CELULAR ===== */
+
+@media (max-width: 600px) {
   .perro {
     width: 110px;
     top: auto;
@@ -285,4 +305,23 @@ button:hover {
     right: -10px;
   }
 }
-/* ===== CELULAR ===== */
+
+/* ===== LOGO GANAMOS CELULAR ===== */
+
+@media (max-width: 600px) {
+  .ganamos {
+    bottom: 60px;
+    width: 160px;
+  }
+}
+
+/* =====BOTON CELULAR ===== */
+
+@media (max-width: 600px) {
+  button,
+  .btn.bono {
+    font-size: 1rem;
+    padding: 10px 16px;
+    width: 260px;
+  }
+}
