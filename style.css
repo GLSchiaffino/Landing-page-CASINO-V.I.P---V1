@@ -1,7 +1,10 @@
 /* ============ BASE ============ */
 html, body {
-  overflow-x: hidden !important;
-  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden !important;
 }
 
 body {
@@ -113,7 +116,7 @@ button {
 
 button:hover {
   background: red;
-  color: black;
+  color: black !important;
   
 }
 
@@ -267,6 +270,9 @@ button:hover {
     justify-content: flex-start;
     background-position: center top;
   }
+    .ruleta {
+    border: 6px solid #d4af37;   /* oro menos chillón */
+  }
 
   .ruleta-container {
     width: 210px;
@@ -275,14 +281,18 @@ button:hover {
 
   .sector-label {
     font-size: 13px;
-    color:rgba(255, 215, 0, 0.7);              /* ✅ siempre visible */
-  text-shadow: 0 0 4px black;
+    color:whitesmoke !important;           
+  text-shadow: 0 0 5px black;
   }
 
   .perro {
     width: 140px;
     bottom: 20px;
     top: auto;
+  }
+
+  .btn.bono {
+    margin-top: 50px;
   }
 
 }
