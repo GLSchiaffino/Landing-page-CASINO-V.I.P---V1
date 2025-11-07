@@ -83,7 +83,7 @@ img {
   font-size: 18px;
   font-weight: 700;
   pointer-events: none;
-  color: white;
+  color: rgba(255, 215, 0, 0.7);
   text-shadow: 0 0 4px black;
 
   transform-origin: center;
@@ -196,7 +196,7 @@ button:hover {
 
  .whatsapp-float {
       position: absolute;
-      top: 20px;
+      bottom: 20px;
       right: 20px;
       background-color: #25d366;
       border-radius: 50%;
@@ -261,7 +261,7 @@ button:hover {
 
   .sector-label {
     font-size: 13px;
-    color: white;              /* ✅ siempre visible */
+    color:rgba(255, 215, 0, 0.7);              /* ✅ siempre visible */
   text-shadow: 0 0 4px black;
   }
 

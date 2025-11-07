@@ -1,0 +1,327 @@
+/* ============  BASE  ============ */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255, 215, 0, 0.7);
+
+  background: radial-gradient(circle, rgb(58, 0, 68), #000);
+  background-image: url("./imagenes/fondoLanding_cut.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ============  RULETA  ============ */
+#ruleta {
+  position: relative;
+  width: 300px;     /* o tu tamaño */
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.ruleta-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  z-index: 5;
+}
+
+.ruleta {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid gold;
+  background: conic-gradient(
+    #B3001B 0deg 30deg,   /* rojo */
+    #111111 30deg 60deg, /* negro */
+    #B3001B 60deg 90deg,
+    greenyellow 90deg 120deg,
+    #B3001B 120deg 150deg,
+    #111111 150deg 180deg,
+    #B3001B 180deg 210deg,
+    greenyellow  210deg 240deg,
+    #B3001B 240deg 270deg,
+    #111111 270deg 300deg,
+    #B3001B 300deg 330deg, /* verde */
+    greenyellow  330deg 360deg
+  )!important;
+  transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.flecha {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 25px solid gold;
+  z-index:999;
+}
+
+.sector-label {
+  position: absolute;
+  left: 46%;
+  top: 48%;
+
+  font-size: 18px;
+  font-weight: 700;
+  pointer-events: none;
+  color: white;
+  text-shadow: 0 0 4px black;
+}
+/* ============  BOTONES  ============ */
+
+button {
+  font-family:'Bebas Neue' ;
+  margin-top: 40px;
+  padding: 12px 30px;
+  font-size: 1.5rem;
+  color: #000;
+  background: linear-gradient(90deg, #ffd700, #ffb300);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: red;
+  color: rgba(255, 215, 0, 0.7);
+}
+
+.btn.bono {
+  font-family: 'Bebas Neue';
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+  padding: 18px;
+  max-width: 350px;
+  background: linear-gradient(90deg, #ffd700, #ffb300);
+  color: #000;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+}
+
+.btn.bono:hover {
+  background: greenyellow;
+  color: rgba(255, 215, 0, 0.7);
+}
+
+/* ============ BOTON DE WHATSAPP BRILLANTE  ============ */
+
+ .whatsapp-float {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+      z-index: 3;
+      animation: pulse 2s infinite;
+      text-decoration: none;
+    }
+
+    .whatsapp-float img {
+      width: 34px;
+      height: 34px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 15px rgba(37, 211, 102, 0.6); }
+      50% { transform: scale(1.1); box-shadow: 0 0 25px rgba(37, 211, 102, 0.9); }
+      100% { transform: scale(1); box-shadow: 0 0 15px rgba(37, 211, 102, 0.6); }
+    }
+
+    @media (min-width: 768px) {
+      h1 { font-size: 2.8rem; }
+      p { font-size: 1.1rem; }
+      .btn { font-size: 1.3rem; }
+    }
+
+
+
+/* ============  TÍTULO NEÓN  ============ */
+
+.titulos {
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  color: #6100bb;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+
+  text-shadow:
+    0 0 5px #fff6c2,
+    0 0 10px #ffec80,
+    0 0 20px #ffcc00,
+    0 0 40px #ff9900,
+    0 0 80px #ff6600;
+
+  opacity: 0;
+  transform: scale(0.8);
+
+  animation:
+    encendido 2s ease-out forwards,
+    parpadeo 2s infinite alternate 2s;
+}
+
+
+/* ANIMACIONES */
+@keyframes encendido {
+  0% { opacity: 0; transform: scale(0.8); }
+  60% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes parpadeo {
+  from {}
+  to {}
+}
+
+
+
+   
+/* ============  PERROS (DECORACIÓN)  ============ */
+
+.perros-deco {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.perro {
+  position: absolute;
+  width: 330px;
+  transform: translateY(-50%);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Izquierda */
+.perro-left {
+  top: 51%;
+  
+  left: 0px;
+  
+}
+
+/* Derecha */
+.perro-right {
+  top: 55%;
+  right: 0px;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .ruleta-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .perro {
+    width: 250px;
+  }
+}
+
+/* =========== CELULAR =========== */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Fixed causa problemas en móvil */
+        background-position: center bottom; /* Ajusta qué parte se ve */
+    }
+}
+
+
+
+/* ===== RULETA CELULAR ===== */
+
+@media{
+  .ruleta {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media(max-width: 768px){
+  .ruleta-container {
+    width: 250px;
+    height: 250px;
+  }
+  .sector-label {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+    .ruleta-container {
+     width: 200px; /* Aún más pequeño en pantallas muy chicas */
+     height: 200px;
+    }
+  }
+
+/* =====PERRO CELULAR ===== */
+
+@media (max-width: 600px) {
+  .perro {
+    width: 110px;
+    top: auto;
+    bottom: 20px;
+  }
+
+  .perro.izq {
+    left: -10px;
+  }
+
+  .perro.der {
+    right: -10px;
+  }
+}
+
+/* ===== LOGO GANAMOS CELULAR ===== */
+
+@media (max-width: 600px) {
+  .ganamos {
+    bottom: 60px;
+    width: 160px;
+  }
+}
+
+/* =====BOTON CELULAR ===== */
+
+@media (max-width: 600px) {
+  button,
+  .btn.bono {
+    font-size: 1rem;
+    padding: 10px 16px;
+    width: 260px;
+  }
+}
