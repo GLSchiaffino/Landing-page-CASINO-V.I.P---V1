@@ -213,7 +213,7 @@ button:hover {
 
  .whatsapp-float {
       position: absolute;
-      bottom: 20px;
+      top:10%;
       right: 20px;
       background-color: #25d366;
       border-radius: 50%;
